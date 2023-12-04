@@ -124,7 +124,7 @@ def compare_interpolations(nodes):
     # Obliczenia wartości funkcji sklejanej sześciennej
     S_custom = cubic_spline_interpolation(x, nodes, A, B, C)
 
-    # Utwórz funkcję sklejanej sześciennej za pomocą CubicSpline
+    # Utworzenie funkcji sklejanej sześciennej za pomocą CubicSpline
     cs = CubicSpline(nodes[:, 0], nodes[:, 1], bc_type='natural')
 
     # Obliczenia wartości funkcji CubicSpline
