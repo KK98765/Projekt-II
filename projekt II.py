@@ -25,7 +25,7 @@ def natural_cubic_spline(nodes):
     z[-1] = 0
     
     for i in range(n - 1, 0, -1):
-        z[i] = 1 / u[i] * (v[i] - h[i] * z[i+1])
+        z[i] = (v[i] - h[i] * z[i+1]) / u[i] 
     
     A = np.zeros(n)
     B = np.zeros(n)
